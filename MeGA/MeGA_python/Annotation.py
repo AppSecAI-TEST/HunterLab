@@ -34,13 +34,12 @@ class FileAnnotator:
     go_up_clause = 'u'
     reminder = '[{}]annotation, [{}]next line, [{}]exit'.format(next_annotation_clause, next_line_clause, exit_clause)
 
-    def __init__(self):
-        self.annotations = None
-        self.ontologies = None
-        self.ontologies_file = 'Inputs/ontologies_metadata.csv'
+    def __init__(self, onto_file=None, use_local=True):
+        self.ontos = {}
+        if onto_file is not None:
+            self.ontos = load_ontologies(onto_file, use_local)
 
-    def begin_annotating_file(self, input_file_name, output_file_name, use_local=True, use_custom=False):
-        self.ontologies = load_ontologies(self.ontologies_file, use_local)
+    def begin_annotating_file(self, input_file_name, output_file_name, use_custom=False):
 
         try:
             with open(input_file_name, 'r') as f, open(output_file_name, 'w') as g:
@@ -80,7 +79,8 @@ class FileAnnotator:
                 g.write('{}\n\n'.format(annotations_to_string(annotations)))
 
                 # Finish writing file in annotation format
-                for line in f.readline():
+
+                for line in f.readlines():
                     line_to_annotate = tokenize(line)
                     annotations = [{'token': tok, 'annotation': ''} for i, tok in enumerate(line_to_annotate)]
                     g.write('{}\n\n'.format(annotations_to_string(annotations)))
@@ -108,7 +108,7 @@ class FileAnnotator:
     def select_ontology(self):
         level_code = 2
 
-        options = {i: option for i, option in enumerate(self.ontologies)}
+        options = {i: option for i, option in enumerate(self.ontos)}
 
         for i, option in options.items():
             print('[{}] {}'.format(i, option))
@@ -120,7 +120,6 @@ class FileAnnotator:
             return None
 
     def select_ontology_term(self, annotations, index):
-        level_code = 2
 
         ontology = None
         roots = []
@@ -139,25 +138,11 @@ class FileAnnotator:
                         pass
                     else:
                         selected_terms.append(ontology_name)
-                        ontology, roots = self.ontologies[ontology_name]
+                        ontology, roots = self.ontos[ontology_name]
                         id_to_name = {id_: data['name'] for id_, data in ontology.nodes(data=True)}
                         name_to_id = {data['name']: id_ for id_, data in ontology.nodes(data=True)}
                 else:
-                    options = {i: option for i, option in enumerate(ontology_options)}
-                    for i, option in options.items():
-                        tabs = '\t' * len(selected_terms)
-                        print('{}[{}] {}'.format(tabs, i, option))
-                    for i, term in reversed(list(enumerate(selected_terms))):
-                        tabs = '\t' * i
-                        print('{}-{}'.format(tabs, term))
-
-                    try:
-                        term = self.get_input('Select term: ', level_code, options=options)
-                        selected_terms.append(term)
-                    except GoUp:
-                        selected_terms.pop()
-                    except NotOption:
-                        pass
+                    self.display_onto_options(selected_terms, ontology_options)
 
                 if len(selected_terms) > 1:
                     ontology_options = get_subterms(selected_terms[-1], ontology, id_to_name, name_to_id)
@@ -171,6 +156,24 @@ class FileAnnotator:
                 return selected_terms[0]
             else:
                 return ''
+
+    def display_onto_options(self, selected_terms, ontology_options):
+        level_code = 2
+
+        options = {i: option for i, option in enumerate(ontology_options)}
+        for i, option in options.items():
+            tabs = '\t' * len(selected_terms)
+            print('{}[{}] {}'.format(tabs, i, option))
+        for i, term in reversed(list(enumerate(selected_terms))):
+            tabs = '\t' * i
+            print('{}-{}'.format(tabs, term))
+        try:
+            term = self.get_input('Select term: ', level_code, options=options)
+            selected_terms.append(term)
+        except GoUp:
+            selected_terms.pop()
+        except NotOption:
+            pass
 
     def get_input(self, prompt, level_code, options=None):
 
@@ -248,7 +251,10 @@ def annotations_to_string(annotations, index=-1):
     tok_indices_output = ''
     line_output = ''
     annotations_output = ''
-    col_width = max(len(word) for a in annotations for _, word in a.items()) + 4
+    try:
+        col_width = max(len(word) for a in annotations for _, word in a.items()) + 4
+    except ValueError:
+        col_width = 0
     for i, a in enumerate(annotations):
         if i == index:
             line_output += '{}\t|'.format(highlight(a['token'])).expandtabs(col_width)
