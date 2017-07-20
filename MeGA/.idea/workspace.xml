@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12783c59-4760-41d3-8d9d-d3091f60e6a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MeGA_python/Annotation_GUI.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MeGA_python/Basic_GUI.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MeGA_python/demo.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Annotation.py" afterPath="$PROJECT_DIR$/MeGA_python/Annotation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Main.py" afterPath="$PROJECT_DIR$/MeGA_python/Main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +52,8 @@
       <file leaf-file-name="Annotation_GUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+            <state relative-caret-position="1375">
+              <caret line="88" column="41" lean-forward="true" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -640,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500493172620</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Started GUI">
+      <created>1500544912969</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1500544912969</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -707,7 +709,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added other files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added other files" />
+    <MESSAGE value="Started GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -995,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+        <state relative-caret-position="1375">
+          <caret line="88" column="41" lean-forward="true" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
