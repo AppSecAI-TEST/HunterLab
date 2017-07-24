@@ -2,7 +2,7 @@ from Mechanism import Mechanism
 from Annotation import FileAnnotator
 from Annotation_GUI import AnnotationGUI
 import sys
-from tkinter import Tk
+from tkinter import Tk, PhotoImage, Label
 
 
 def test_graphs():
@@ -22,10 +22,12 @@ def test_annotations():
 
 
 def test_gui():
-    root = Tk(className='MeGA')
-    root.configure(bg='#2D3142')
+    window = Tk()
+    window.configure(bg='#2D3142')
+    window.title('MeGA')
+    window.wm_iconbitmap('Inputs/Images/Icon.ico')
 
-    gui = AnnotationGUI(master=root)
+    gui = AnnotationGUI(master=window)
 
     preload_ontology = {
         'File': 'Inputs/ontologies/go-basic.obo',
