@@ -5,9 +5,9 @@
   <groupId>ucdenver.anschutz.cpbs.hunter</groupId>
   <artifactId>mechanic</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>MechAnIC</name>
+  <description>A plugin to annotate ontologies</description>
   <packaging>jar</packaging>
-
-  <name>mechanic</name>
   <url>http://maven.apache.org</url>
 
   <properties>
