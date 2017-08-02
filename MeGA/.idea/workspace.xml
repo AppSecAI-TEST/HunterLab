@@ -5,8 +5,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12783c59-4760-41d3-8d9d-d3091f60e6a8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MechAnIC/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/artifacts/MechAnIC_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__com_googlecode_mdock_mdock_2_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__com_jgoodies_jgoodies_common_1_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__com_jgoodies_jgoodies_looks_2_5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__edu_stanford_protege_org_protege_common_5_0_0_beta_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__edu_stanford_protege_org_protege_editor_core_application_5_0_0_beta_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__edu_stanford_protege_org_protege_editor_owl_5_0_0_beta_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__edu_stanford_protege_org_protege_xmlcatalog_1_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__edu_stanford_protege_protege_owlapi_extensions_3_2_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_api_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_apibinding_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_contract_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_distribution_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_impl_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_oboformat_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_parsers_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_owlapi_tools_3_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_apache_felix_org_apache_felix_framework_4_4_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_apache_felix_org_apache_felix_main_4_4_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_apache_felix_org_osgi_core_1_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/MechAnIC.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/out/artifacts/MechAnIC_jar/MechAnIC.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/main/java/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/main/java/edu/ucdenver/anschutz/cpbs/hunter/MechAnIC_GUI.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/main/java/edu/ucdenver/anschutz/cpbs/hunter/MechAnIC_GUI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/main/java/edu/ucdenver/anschutz/cpbs/hunter/TemplateMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/main/java/edu/ucdenver/anschutz/cpbs/hunter/TemplateView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/src/test/java/ucdenver/anschutz/cpbs/hunter/AppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/LayoutState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/Spacer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/SupportCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/Util.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/edu/ucdenver/anschutz/cpbs/hunter/MechAnIC_GUI$exitaction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/edu/ucdenver/anschutz/cpbs/hunter/MechAnIC_GUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/edu/ucdenver/anschutz/cpbs/hunter/TemplateMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/edu/ucdenver/anschutz/cpbs/hunter/TemplateView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/classes/edu/ucdenver/anschutz/cpbs/hunter/TemplateView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MechAnIC/target/test-classes/ucdenver/anschutz/cpbs/hunter/AppTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MeGA.iml" afterPath="$PROJECT_DIR$/.idea/MeGA.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Harrison.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Harrison.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inputs/Darden_prerelease2016_fig5_mechanism.txt" afterPath="$PROJECT_DIR$/Inputs/Darden_prerelease2016_fig5_mechanism.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inputs/ontologies_metadata.csv" afterPath="$PROJECT_DIR$/Inputs/ontologies_metadata.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Activity.py" afterPath="$PROJECT_DIR$/MeGA_python/Activity.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Annotation.py" afterPath="$PROJECT_DIR$/MeGA_python/Annotation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Annotation_GUI.py" afterPath="$PROJECT_DIR$/MeGA_python/Annotation_GUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Basic_GUI.py" afterPath="$PROJECT_DIR$/MeGA_python/Basic_GUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/BlackBox.py" afterPath="$PROJECT_DIR$/MeGA_python/BlackBox.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Component.py" afterPath="$PROJECT_DIR$/MeGA_python/Component.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Edge.py" afterPath="$PROJECT_DIR$/MeGA_python/Edge.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Entity.py" afterPath="$PROJECT_DIR$/MeGA_python/Entity.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/File_Readers.py" afterPath="$PROJECT_DIR$/MeGA_python/File_Readers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Main.py" afterPath="$PROJECT_DIR$/MeGA_python/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Mechanism.py" afterPath="$PROJECT_DIR$/MeGA_python/Mechanism.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/Node.py" afterPath="$PROJECT_DIR$/MeGA_python/Node.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeGA_python/demo.py" afterPath="$PROJECT_DIR$/MeGA_python/demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Outputs/test_file_annotation.txt" afterPath="$PROJECT_DIR$/Outputs/test_file_annotation.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/.idea/dictionaries/Harrison.xml" afterPath="$PROJECT_DIR$/WebApplication/.idea/dictionaries/Harrison.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/.idea/libraries/R_User_Library.xml" afterPath="$PROJECT_DIR$/WebApplication/.idea/libraries/R_User_Library.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/WebApplication/settings.py" afterPath="$PROJECT_DIR$/WebApplication/WebApplication/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/WebApplication/urls.py" afterPath="$PROJECT_DIR$/WebApplication/WebApplication/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/WebApplication/wsgi.py" afterPath="$PROJECT_DIR$/WebApplication/WebApplication/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/admin.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/apps.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/models.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/detail.html" afterPath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/index.html" afterPath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/results.html" afterPath="$PROJECT_DIR$/WebApplication/annotations/templates/annotations/results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/tests.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/urls.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/annotations/views.py" afterPath="$PROJECT_DIR$/WebApplication/annotations/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebApplication/manage.py" afterPath="$PROJECT_DIR$/WebApplication/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_jfact_1_0_0.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__net_sourceforge_owlapi_jfact_1_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_core_org_eclipse_core_jobs_3_5_0_v20100515.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_core_org_eclipse_core_jobs_3_5_0_v20100515.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_equinox_org_eclipse_equinox_common_3_6_0_v20100503.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_equinox_org_eclipse_equinox_common_3_6_0_v20100503.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_equinox_org_eclipse_equinox_registry_3_5_0_v20100503.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_equinox_org_eclipse_equinox_registry_3_5_0_v20100503.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_osgi_org_eclipse_osgi_3_6_0_v20100517.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__org_eclipse_osgi_org_eclipse_osgi_3_6_0_v20100517.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/modules.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MechAnIC/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MechAnIC/pom.xml" afterPath="$PROJECT_DIR$/../MechAnIC/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,21 +115,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MeGA$Annotation_GUI.coverage" NAME="Annotation_GUI Coverage Results" MODIFIED="1500507406673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeGA_python" />
     <SUITE FILE_PATH="coverage/MeGA$MeGA.coverage" NAME="MeGA_python Coverage Results" MODIFIED="1500432850007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MeGA$WebApplication.coverage" NAME="WebApplication Coverage Results" MODIFIED="1500344358358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MeGA$demo.coverage" NAME="demo Coverage Results" MODIFIED="1500531768066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeGA_python" />
+    <SUITE FILE_PATH="coverage/MeGA$Annotation_GUI.coverage" NAME="Annotation_GUI Coverage Results" MODIFIED="1500507406673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeGA_python" />
     <SUITE FILE_PATH="coverage/MeGA$py_test_in_test_py.coverage" NAME="py.test in test.py Coverage Results" MODIFIED="1500525973739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeGA_python" />
-    <SUITE FILE_PATH="coverage/MeGA$MeGA_python.coverage" NAME="MeGA_python Coverage Results" MODIFIED="1500748013373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MeGA$MeGA_python.coverage" NAME="MeGA_python Coverage Results" MODIFIED="1501694922000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MeGA_python/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="549">
+              <caret line="44" column="15" lean-forward="false" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -41,7 +139,7 @@
       <file leaf-file-name="Annotation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5075">
+            <state relative-caret-position="3045">
               <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -53,7 +151,7 @@
       <file leaf-file-name="Annotation_GUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
+            <state relative-caret-position="555">
               <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -65,7 +163,7 @@
       <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MeGA_python/demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="15">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -77,7 +175,7 @@
       <file leaf-file-name="Basic_GUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MeGA_python/Basic_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="90">
               <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -153,10 +251,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1669" />
-    <option name="y" value="141" />
-    <option name="width" value="1622" />
-    <option name="height" value="922" />
+    <option name="x" value="1277" />
+    <option name="y" value="101" />
+    <option name="width" value="1269" />
+    <option name="height" value="1253" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -176,166 +274,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA_python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inputs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inputs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontologies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeGA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inputs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -361,7 +306,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.MeGA_python">
-    <configuration default="false" name="Annotation_GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Annotation_GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -378,43 +323,50 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="py.test in demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeGA_python" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MeGA" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/MeGA_python/demo.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MeGA_python" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeGA_python" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MeGA" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeGA_python/demo.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeGA_python/Main.py" />
+      <option name="PARAMETERS" value="a" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+    </configuration>
+    <configuration name="WebApplication" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Harrison\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MeGA" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebApplication/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -520,15 +472,6 @@
       <module name="MeGA" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -573,50 +516,46 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="MeGA_python" type="PythonConfigurationType" factoryName="Python" singleton="true">
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Harrison\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeGA_python" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MeGA" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeGA_python/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeGA_python/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="WebApplication" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="py.test in demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Harrison\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeGA_python" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MeGA" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebApplication/manage.py" />
-      <option name="PARAMETERS" value="runserver" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/MeGA_python/demo.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.MeGA_python" />
       <item index="1" class="java.lang.String" itemvalue="Python.WebApplication" />
       <item index="2" class="java.lang.String" itemvalue="Python.Annotation_GUI" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in demo.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python.demo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.demo" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in demo.py" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -670,20 +609,17 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1669" y="141" width="1622" height="922" extended-state="6" />
-    <editor active="true" />
+    <frame x="1277" y="101" width="1269" height="1253" extended-state="0" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28850856" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37916666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21870968" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27806562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -692,6 +628,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -721,7 +659,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -736,6 +674,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MeGA_python/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MeGA_python/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MeGA_python/Basic_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MeGA_python/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -949,34 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1568291755/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="233" column="4" lean-forward="false" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/io.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-503">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Documents/Prelim Materials/Day 3/Prelim_D3_code/RED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="313" column="36" lean-forward="false" selection-start-line="313" selection-start-column="24" selection-end-line="313" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1568291755/builtins.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/io.py" />
+    <entry file="file://E:/Documents/Prelim Materials/Day 3/Prelim_D3_code/RED.py" />
     <entry file="file://$PROJECT_DIR$/MeGA_python/File_Readers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
@@ -984,13 +948,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/obonet/read.py" />
     <entry file="file://$PROJECT_DIR$/MeGA_python/Activity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1001,7 +959,7 @@
     <entry file="file://$PROJECT_DIR$/MeGA_python/demo2.py" />
     <entry file="file://$PROJECT_DIR$/MeGA_python/demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="15">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -1009,24 +967,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2365">
-          <caret line="2129" column="17" lean-forward="false" selection-start-line="2129" selection-start-column="17" selection-end-line="2129" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/tkinter/ttk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="552" column="27" lean-forward="false" selection-start-line="552" selection-start-column="27" selection-end-line="552" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/tkinter/__init__.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/tkinter/ttk.py" />
     <entry file="file://$PROJECT_DIR$/MeGA_python/Basic_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="90">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -1036,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5075">
+        <state relative-caret-position="3045">
           <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1046,7 +991,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MeGA_python/Annotation_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
+        <state relative-caret-position="555">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -1056,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MeGA_python/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="549">
+          <caret line="44" column="15" lean-forward="false" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

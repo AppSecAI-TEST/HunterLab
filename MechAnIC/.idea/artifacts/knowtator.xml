@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="knowtator">
+    <output-path>C:/Program Files/Protege-5.2.0/plugins</output-path>
+    <root id="archive" name="knowtator.jar">
+      <element id="module-output" name="MechAnIC" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.xml" />
+      <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+    </root>
+  </artifact>
+</component>

@@ -43,7 +43,12 @@ def test_gui():
 
 
 def main(args):
-    test_gui()
+    if args[1] == 'g':
+        test_graphs()
+    if args[1] == 'a':
+        test_annotations()
+    if args[1] == 'gui':
+        test_gui()
 
 if __name__ == '__main__':
     main(sys.argv)

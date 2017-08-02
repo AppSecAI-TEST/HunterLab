@@ -1,37 +1,112 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
-  <groupId>ucdenver.anschutz.cpbs.hunter</groupId>
-  <artifactId>mechanic</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>MechAnIC</name>
-  <description>A plugin to annotate ontologies</description>
-  <packaging>jar</packaging>
-  <url>http://maven.apache.org</url>
+	<groupId>edu.ucdenver.anschutz.cpbs.hunter</groupId>
+	<artifactId>mechanic</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<name>MechAnIC</name> 
+	<description>A plugin for annotating mechanisms</description> 
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/edu.stanford.protege/org.protege.editor.owl -->
-    <dependency>
-      <groupId>edu.stanford.protege</groupId>
-      <artifactId>org.protege.editor.owl</artifactId>
-      <version>5.0.0-beta-17</version>
-    </dependency>
+	<packaging>bundle</packaging>
 
-  </dependencies>
+	
+	<dependencies>
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>org.protege.common</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+
+        <dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>org.protege.editor.core.application</artifactId>
+			<version>4.3.0</version>
+        </dependency>
+
+        <dependency>
+			<groupId>edu.stanford.protege</groupId>
+            <artifactId>org.protege.editor.owl</artifactId>
+			<version>4.3.0</version>
+        </dependency>
+		<dependency>
+			<groupId>com.jgoodies</groupId>
+			<artifactId>forms</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.0</version>
+              <configuration>
+                <source>1.6</source>
+                <target>1.6</target>
+              </configuration>
+            </plugin>
+            <plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-ClassPath>.</Bundle-ClassPath>
+						<Bundle-SymbolicName>${project.artifactId};singleton:=true</Bundle-SymbolicName>
+						<Bundle-Vendor>The Protege Development Team</Bundle-Vendor>
+						<Import-Package>
+							org.apache.log4j.*;version="[1.2,2)", 
+							org.protege.editor.core.*;version="4.3",
+							org.protege.editor.owl.*;version="4.3",
+							*
+						</Import-Package>
+						<Include-Resource>plugin.xml, {maven-resources}</Include-Resource>
+						<Private-Package>skeleton</Private-Package>
+					</instructions>
+
+				</configuration>
+				<executions>
+					<execution>
+						<id>bundle-manifest</id>
+						<phase>install</phase>
+						<goals>
+							<goal>manifest</goal>
+						</goals>
+					</execution>
+				</executions>
+            </plugin>
+            <plugin>
+              <artifactId>maven-eclipse-plugin</artifactId>
+              <version>2.9</version>
+              <configuration>
+                <pde>true</pde>
+              </configuration>
+            </plugin>
+			<plugin>
+				<groupId>edu.ucdenver.anschutz.cpbs.hunter</groupId>
+				<artifactId>mechanic</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+				<configuration>
+					<outputDirectory>"${env.PROTEGE_HOME}/plugins"</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/MeGA_python" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Inputs" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6.0 (C:\Users\Harrison\Anaconda3\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.1 (~/anaconda/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="R Skeletons" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
