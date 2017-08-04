@@ -72,6 +72,7 @@ import edu.uchsc.ccp.knowtator.util.ConsensusAnnotations;
 import edu.uchsc.ccp.knowtator.util.ConsensusException;
 import edu.uchsc.ccp.knowtator.util.ConsensusSet;
 
+@SuppressWarnings({"WeakerAccess", "unused", "unchecked", "PackageAccessibility", "JavaDoc"})
 public class KnowtatorManager implements CurrentAnnotationsChangedListener, AnnotationCreatedListener,
 		TextSourceChangeListener {
 	private KnowledgeBase kb;
@@ -105,46 +106,44 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 
 	ColorFrameRenderer renderer;
 
-	List<SimpleInstance> filteredAnnotations;
+	private List<SimpleInstance> filteredAnnotations;
 
-	List<SimpleInstance> visibleFilteredAnnotations;
+	private List<SimpleInstance> visibleFilteredAnnotations;
 
 	List<SimpleInstance> partiallyFilteredAnnotations;
 
-	List<SimpleInstance> selectableFilteredAnnotations;
+	private List<SimpleInstance> selectableFilteredAnnotations;
 
-	Cls selectedCls;
+	private Cls selectedCls;
 
-	SimpleInstance selectedAnnotation;
+	private SimpleInstance selectedAnnotation;
 	
 	/** The selected annotation in the comparison view (the far right annotation) */
-	SimpleInstance selectedConsensusAnnotation;
+	private SimpleInstance selectedConsensusAnnotation;
 
 	/** the selectedAnnotation if not null else the last non-null selectedAnnotation */
-	SimpleInstance lastSelectedAnnotation; 
-	
-	SimpleInstance lasteSelectedConsensusAnnotation;
+	private SimpleInstance lastSelectedAnnotation;
 
-	List<Span> selectedSpans;
+	private List<Span> selectedSpans;
 
-	Comparator<SimpleInstance> annotationComparator;
+	private Comparator<SimpleInstance> annotationComparator;
 
-	Frame fastAnnotateFrame = null;
+	private Frame fastAnnotateFrame = null;
 
 	/** Set of Frames (classes) that will be shown in the fast annotate tool bar */
 	Set<FrameID> fastAnnotateFrameSet = null;
 
-	boolean fastAnnotateMode = false;
+	private boolean fastAnnotateMode = false;
 
 	SimpleInstance selectedFilter = null;
 
-	boolean consensusMode = false;
+	private boolean consensusMode = false;
 	
-	boolean requiredMode = false;
+	private boolean requiredMode = false;
 
-	ConsensusSet consensusSet = null;
+	private ConsensusSet consensusSet = null;
 
-	Logger logger = Logger.getLogger(KnowtatorManager.class);
+	private Logger logger = Logger.getLogger(KnowtatorManager.class);
 
 	public KnowtatorManager(KnowtatorProjectUtil kpu) {
 		this.kpu = kpu;
@@ -257,7 +256,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 * @return the next annotation
 	 * @see #selectNextAnnotation()
 	 */
-	public SimpleInstance getNextAnnotation() {
+	private SimpleInstance getNextAnnotation() {
 		logger.debug("");
 		return getNextPreviousAnnotation(1);
 	}
@@ -267,7 +266,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 * @return the previous annotation
 	 * @see #selectPreviousAnnotation
 	 */
-	public SimpleInstance getPreviousAnnotation() {
+	private SimpleInstance getPreviousAnnotation() {
 		logger.debug("");
 		return getNextPreviousAnnotation(-1);
 	}
@@ -394,7 +393,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 * 
 	 * @return The count of annotations that have unset required slots.
 	 */
-	public int getRequiredAnnotationCount() {
+	int getRequiredAnnotationCount() {
 		int requiredAnnotationCount = 0;
 		
 		List<SimpleInstance> frameAnnotations = getCurrentFilteredAnnotations();
@@ -569,7 +568,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		if( annotation != null ) {
 			List<Span> spans = annotationUtil.getSpans( annotation );
 			for (Span span : spans) {
-				int averageSpan = (int)((span.getStart() + span.getEnd()) / 2);
+				int averageSpan = (span.getStart() + span.getEnd()) / 2;
 				
 				KnowtatorTextPane textPane = getTextPane();
 				textPane.setPreviousOffset( averageSpan );
@@ -681,7 +680,6 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		logger.debug("selected consensus annotation=\"" + browserTextUtil.getBrowserText(consensusAnnotation, 100) + "\"");
 		selectedConsensusAnnotation = consensusAnnotation;
 		if (consensusAnnotation != null) {
-			lasteSelectedConsensusAnnotation = consensusAnnotation;
 		}
 		
 		EventHandler.getInstance().fireSelectedConsensusAnnotationChanged(consensusAnnotation);
@@ -702,8 +700,8 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 */
 	public void setSelectedAnnotations(List<SimpleInstance> selectedAnnotations) {
 		if( selectedAnnotations.size() >= 2 ) {
-			SimpleInstance firstAnnotation = (SimpleInstance)selectedAnnotations.get(0);
-			SimpleInstance secondAnnotation = (SimpleInstance)selectedAnnotations.get(1);
+			SimpleInstance firstAnnotation = selectedAnnotations.get(0);
+			SimpleInstance secondAnnotation = selectedAnnotations.get(1);
 						
 			setSelectedAnnotation( firstAnnotation );
 			setSelectedConsensusAnnotation( secondAnnotation );
@@ -717,7 +715,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 * of the same type as the currently selected annotation that is 'next'
 	 * according to the sort order defined by the currently selected comparator.
 	 */
-	public void selectNextAnnotation() {
+	void selectNextAnnotation() {
 		logger.debug("");
 		setSelectedAnnotation(getNextAnnotation());
 	}
@@ -728,7 +726,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 * 'next' according to the sort order defined by the currently selected
 	 * comparator.
 	 */
-	public void selectPreviousAnnotation() {
+	void selectPreviousAnnotation() {
 		logger.debug("");
 		setSelectedAnnotation(getPreviousAnnotation());
 	}
@@ -769,7 +767,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		EventHandler.getInstance().fireSelectedSpanChanged(selectedSpans);
 	}
 
-	public List<SimpleInstance> getColorAssignments() {
+	List<SimpleInstance> getColorAssignments() {
 		logger.debug("");
 		SimpleInstance configuration = ProjectSettings.getActiveConfiguration(kb.getProject());
 		Collection<SimpleInstance> colorAssignments = (Collection<SimpleInstance>) configuration
@@ -794,7 +792,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		return returnValues;
 	}
 	
-	public List<Cls> getFastAnnotateClses() {
+	List<Cls> getFastAnnotateClses() {
 		logger.debug("");
 		SimpleInstance configuration = ProjectSettings.getActiveConfiguration(kb.getProject());
 		Collection<Cls> fastAnnotateClasses = (Collection<Cls>) configuration.getDirectOwnSlotValues(kpu.getFastAnnotateSlot());
@@ -807,18 +805,18 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		return returnValues;
 	}
 	
-	public void setFastAnnotateClses( List<Cls> fastAnnotateClses ) {
+	private void setFastAnnotateClses(List<Cls> fastAnnotateClses) {
 		SimpleInstance configuration = ProjectSettings.getActiveConfiguration(kb.getProject());
 		configuration.setDirectOwnSlotValues(kpu.getFastAnnotateSlot(), fastAnnotateClses);		
 	}
 	
-	public void removeFastAnnotateCls( Frame fastAnnotateCls ) {
+	void removeFastAnnotateCls(Frame fastAnnotateCls) {
 		List<Cls> fastAnnotateClasses = getFastAnnotateClses();
 		fastAnnotateClasses.remove( fastAnnotateCls );
 		setFastAnnotateClses(fastAnnotateClasses);
 	}
 	
-	public void addFastAnnotateCls( Cls fastAnnotateCls ) {
+	private void addFastAnnotateCls(Cls fastAnnotateCls) {
 		List<Cls> fastAnnotateClasses = getFastAnnotateClses();
 		if( fastAnnotateClasses != null && !fastAnnotateClasses.contains( fastAnnotateCls ) ) {
 			fastAnnotateClasses.add( fastAnnotateCls );
@@ -922,7 +920,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	public void deleteAnnotation(SimpleInstance annotation) {
 		logger.debug("");
 		if (annotation != null) {
-			annotationUtil.deleteMention((SimpleInstance) annotation);
+			annotationUtil.deleteMention(annotation);
 			kb.deleteInstance(annotation);
 			filteredAnnotations.remove(annotation);
 			partiallyFilteredAnnotations.remove(annotation);
@@ -933,7 +931,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	}
 
 	// TODO what should the cls of the new annotation be?
-	public void duplicateSelectedAnnotation() {
+	void duplicateSelectedAnnotation() {
 		logger.debug("");
 		SimpleInstance annotation = getSelectedAnnotation();
 		if (annotation != null) {
@@ -1061,12 +1059,12 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		return textPane;
 	}
 
-	public void setTextPane(KnowtatorTextPane textPane) {
+	void setTextPane(KnowtatorTextPane textPane) {
 		logger.debug("");
 		this.textPane = textPane;
 	}
 
-	public Comparator<SimpleInstance> getAnnotationComparator() {
+	Comparator<SimpleInstance> getAnnotationComparator() {
 		logger.debug("");
 		return annotationComparator;
 	}
@@ -1076,7 +1074,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		return textViewer.comparator(annotation);
 	}
 
-	public void setAnnotationComparator(Comparator<SimpleInstance> annotationComparator) {
+	void setAnnotationComparator(Comparator<SimpleInstance> annotationComparator) {
 		logger.debug("");
 		this.annotationComparator = annotationComparator;
 	}
@@ -1091,7 +1089,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 		return fastAnnotateFrame;
 	}
 
-	public void setFastAnnotateFrame(Frame fastAnnotateFrame) {
+	void setFastAnnotateFrame(Frame fastAnnotateFrame) {
 		logger.debug("");
 		this.fastAnnotateFrame = fastAnnotateFrame;
 		if (fastAnnotateFrame != null) {
@@ -1139,7 +1137,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	public void removeFastAnnotateFrame(Frame frame) {
 		if (frame != null) {
 			fastAnnotateFrameSet.remove(frame.getFrameID());
-			removeFastAnnotateCls( (Cls)frame );
+			removeFastAnnotateCls(frame);
 		}
 		EventHandler.getInstance().fireFastAnnotateRemoveCls(frame);
 	}
@@ -1154,11 +1152,7 @@ public class KnowtatorManager implements CurrentAnnotationsChangedListener, Anno
 	 *         false otherwise.
 	 */
 	public boolean fastAnnotateToolBarContains(Frame frame) {
-		if (frame != null) {
-			return fastAnnotateFrameSet.contains(frame.getFrameID());
-		} else {
-			return false;
-		}
+		return frame != null && fastAnnotateFrameSet.contains(frame.getFrameID());
 	}
 
 	public void quitFastAnnotate() {

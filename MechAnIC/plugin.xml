@@ -5,7 +5,7 @@
     <extension id="MechAnIC"
                point="org.protege.editor.core.application.ViewComponent">
         <label value="MechAnIC"/>
-        <class value="edu.ucdenver.anschutz.cpbs.hunter.MechAnIC"/>
+        <class value="edu.ucdenver.cpbs.mechanic.MechAnICView"/>
         <headerColor value="@org.protege.ontologycolor"/>
         <category value="@org.protege.ontologycategory" />
     </extension>
