@@ -52,7 +52,7 @@ public class RequiredModeNextAction extends AbstractAction {
 	KnowtatorManager manager;
 	
 	public RequiredModeNextAction( KnowtatorManager manager ) {
-		super( "Next Required Annotation" );
+		super( "Next Required TextAnnotation" );
 		
 		this.manager = manager;
 		

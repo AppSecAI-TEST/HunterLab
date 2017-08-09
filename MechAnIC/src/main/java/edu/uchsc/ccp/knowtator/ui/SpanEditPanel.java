@@ -149,7 +149,7 @@ public class SpanEditPanel extends JPanel implements ActionListener {
 					annotationDisplay.setSelectedSpanIndices(selectedSpanIndices);
 				}
 			} catch (InvalidSpanException ise) {
-				JOptionPane.showMessageDialog(this, "Annotation has an invalid span value: " + ise.getMessage(),
+				JOptionPane.showMessageDialog(this, "TextAnnotation has an invalid span value: " + ise.getMessage(),
 						"Invalid span", JOptionPane.ERROR_MESSAGE);
 			} catch (TextSourceAccessException tsae) {
 				JOptionPane.showMessageDialog(null, "There was a problem retrieving the text from the text source: "

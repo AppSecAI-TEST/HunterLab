@@ -539,7 +539,7 @@ public class Annotation {
 	 *         MatchResult.TRIVIAL_NONMATCH if the classes do not match.
 	 *         MatchResult.TRIVIAL_MATCH if spans and classes match and
 	 *         simpleFeatureNames is empty or null. If spans and classes match,
-	 *         then the result of compareSimpleFeatures(Annotation, Annotation,
+	 *         then the result of compareSimpleFeatures(TextAnnotation, TextAnnotation,
 	 *         Set<String>) is returned.
 	 * @see edu.uchsc.ccp.iaa.Annotation#compareSimpleFeatures(Annotation,
 	 *      Annotation, Set)

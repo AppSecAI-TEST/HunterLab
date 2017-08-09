@@ -82,7 +82,7 @@ public class AnnotationComparisonPanel extends JPanel
 	KnowtatorManager manager;
 	Project project;
 
-	/** Annotation details panel on the left side of the comparison for consensus mode.  */
+	/** TextAnnotation details panel on the left side of the comparison for consensus mode.  */
 	AnnotationDetailsPanel annoDetailsPanel;
 	
 	/** The right most panel showing the annotation details comparison for consensus mode. */

@@ -1,41 +1,50 @@
 package edu.ucdenver.cpbs.mechanic;
 
-import edu.ucdenver.cpbs.mechanic.Commands.CloseCommand;
-import edu.ucdenver.cpbs.mechanic.Commands.OpenCommand;
-import edu.ucdenver.cpbs.mechanic.Commands.SaveCommand;
-import edu.ucdenver.cpbs.mechanic.ui.MechAnICSelectionModel;
+import edu.ucdenver.cpbs.mechanic.TextAnnotation.TextAnnotationUtil;
+import edu.ucdenver.cpbs.mechanic.Commands.*;
 import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
-import edu.ucdenver.cpbs.mechanic.ui.options.MechAnICViewOptions;
 import org.apache.log4j.Logger;
 import org.protege.editor.owl.ui.view.cls.AbstractOWLClassViewComponent;
-import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.*;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.dnd.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import static edu.ucdenver.cpbs.mechanic.Commands.OpenDocumentCommand.openInitialFile;
 
 
+@SuppressWarnings("PackageAccessibility")
 public class MechAnICView extends AbstractOWLClassViewComponent implements DropTargetListener {
 
     private static final Logger log = Logger.getLogger(MechAnICView.class);
-    private MechAnICSelectionModel selectionModel;
-    private JTabbedPane tabbedPane;
-    private JFileChooser fileChooser;
-    private MechAnICViewOptions options;
 
+    private JTabbedPane tabbedPane;
+
+    private TextAnnotationUtil textAnnotationUtil;
+    private MechAnICSelectionModel selectionModel;
 
     @Override
     public void initialiseClassView() throws Exception {
+
         selectionModel = new MechAnICSelectionModel();
+        textAnnotationUtil = new TextAnnotationUtil(this);
+        textAnnotationUtil.setCurrentAnnotator("none", "none");
 
         createUI();
-
         DropTarget dt = new DropTarget(this, this);
         dt.setActive(true);
 
         log.warn("Initialized MechAnIC");
+    }
+
+    @Override
+    protected OWLClass updateView(OWLClass selectedClass) {
+        selectionModel.setSelectedClass(selectedClass);
+        return selectedClass;
     }
 
     private void createUI() {
@@ -43,11 +52,7 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
 
         tabbedPane = new JTabbedPane();
         add(tabbedPane);
-        tabbedPane.add(new TextViewer());
-
-        fileChooser = new JFileChooser();
-        FileFilter fileFilter = new FileNameExtensionFilter("Plain text", "txt");
-        fileChooser.setFileFilter(fileFilter);
+        openInitialFile("C:/Users/Harrison/Documents/test_article.txt", tabbedPane);
 
         setupListeners();
 
@@ -56,22 +61,20 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
     }
 
     private void createToolBar() {
-        addAction(new OpenCommand(tabbedPane, fileChooser), "A", "A");
-        addAction(new SaveCommand(tabbedPane, fileChooser), "A", "B");
-        addAction(new CloseCommand(tabbedPane), "A", "B");
+        addAction(new OpenDocumentCommand(tabbedPane), "A", "A");
+        addAction(new SaveCommand(textAnnotationUtil, tabbedPane), "A", "B");
+        addAction(new CloseCommand(tabbedPane), "A", "C");
+        addAction(new SetAnnotator(textAnnotationUtil), "B", "A");
+        addAction(new AddTextAnnotation(textAnnotationUtil, tabbedPane, selectionModel), "B", "B");
+        addAction(new LoadAnnotations(textAnnotationUtil, tabbedPane), "B", "C");
+        addAction(new AddNewHighlighterProfile(textAnnotationUtil), "C", "A");
     }
 
     private void setupListeners() {
-
     }
 
 
 
-    @Override
-    protected OWLClass updateView(OWLClass selectedClass) {
-        selectionModel.setSelectedClass(selectedClass);
-        return selectedClass;
-    }
 
     @Override
     public void disposeView() {
@@ -103,7 +106,18 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
 
     }
 
-    public MechAnICViewOptions getOptions() {
-        return options;
+    public static void main(String[] args) throws IOException {
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        TextViewer tp = new TextViewer();
+        JScrollPane sp = new JScrollPane(tp);
+        frame.add(sp);
+        String fileName = "C:/Users/Harrison/Desktop/plant_catalog.xml/";
+        tp.read(new BufferedReader(new FileReader(fileName)), fileName);
+
+        frame.pack();
+        frame.setVisible(true);
     }
+
 }

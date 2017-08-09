@@ -78,17 +78,17 @@ public class SpansExactComplexFeatureMatcher implements Matcher {
 	 *            <li>TRIVIAL_NONMATCH if there are no exactly overlapping
 	 *            annotations with the passed in annotation
 	 *            <li>NONTRIVIAL_MATCH if there is an annotation that is exactly
-	 *            overlapping and the Annotation.compareSimpleFeatures returns
+	 *            overlapping and the TextAnnotation.compareSimpleFeatures returns
 	 *            NONTRIVIAL_MATCH
 	 *            <li>TRIVIAL_MATCH if there is an annotation that is exactly
-	 *            overlapping and the Annotation.compareSimpleFeatures returns
+	 *            overlapping and the TextAnnotation.compareSimpleFeatures returns
 	 *            TRIVIAL_MATCH <br>
 	 *            Note: if there is a trivial_match then there cannot possibly
 	 *            be a NONTRIVIAL_MATCH because one of the simple features of
 	 *            the passed in annotation must have a null value or there are
 	 *            no simple features.
 	 *            <li>NONTRIVIAL_NONMATCH if there an annotation that is exactly
-	 *            overlapping and the Annotation.compareSimpleFeatures returns
+	 *            overlapping and the TextAnnotation.compareSimpleFeatures returns
 	 *            NONTRIVIAL_NONMATCH
 	 *            <li>TRIVIAL_NONMATCH if there is no match or non-trivial
 	 *            non-match found.
@@ -121,9 +121,9 @@ public class SpansExactComplexFeatureMatcher implements Matcher {
 
 		boolean nontrivialNonmatch = false;
 
-		// for(Annotation candidateAnnotation : candidateAnnotations)
+		// for(TextAnnotation candidateAnnotation : candidateAnnotations)
 		// {
-		// int result = Annotation.compareComplexFeature(annotation,
+		// int result = TextAnnotation.compareComplexFeature(annotation,
 		// candidateAnnotation, );
 		// if there is a trivial_match then there cannot possibly be a
 		// NONTRIVIAL_MATCH

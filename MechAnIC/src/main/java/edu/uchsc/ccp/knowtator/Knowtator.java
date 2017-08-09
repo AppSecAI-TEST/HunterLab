@@ -83,7 +83,8 @@ import java.util.List;
  * "next" select annotation filter. This method should maybe be moved to
  * ProjectSettings class.
  */
-public class Knowtator extends AbstractTabWidget implements java.awt.event.ActionListener, 
+@SuppressWarnings("ALL")
+public class Knowtator extends AbstractTabWidget implements java.awt.event.ActionListener,
 														    RefreshAnnotationsDisplayListener,
 														    FastAnnotateListener,
 														    FilterChangedListener,
@@ -122,7 +123,7 @@ public class Knowtator extends AbstractTabWidget implements java.awt.event.Actio
 	private static final long serialVersionUID = 131L;
 
 	/**
-	 * This string is used to give a hash key for the AnnotationUtil that will
+	 * This string is used to give a hash key for the TextAnnotationUtil that will
 	 * be passed to the knowledge base as client information that other objects
 	 * can access.
 	 */

@@ -1,5 +1,6 @@
-package edu.ucdenver.cpbs.mechanic.ui;
+package edu.ucdenver.cpbs.mechanic;
 
 public interface MechAnICSelectionListener {
     public void selectionChanged(MechAnICSelectionModel model);
 }
+

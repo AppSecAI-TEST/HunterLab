@@ -52,7 +52,7 @@ import edu.uchsc.ccp.knowtator.util.ProtegeUtil;
  * aids in creating, editing and retrieving annotation intances as well as the
  * supporting annotation classes. The annotation model is defined in
  * annotations.pprj. This project must be included when the annotator plug-in is
- * used. Todo: AnnotationUtil should really not have an instance of knowtator as
+ * used. Todo: TextAnnotationUtil should really not have an instance of knowtator as
  * a member variable. I need to create the appropriate listeners, so that
  * Knowtator can take care of itself as it see fits. Changes: 02/28/2005 added
  * annotation filter functionality 05/02/2005 package changed to ...knowtator

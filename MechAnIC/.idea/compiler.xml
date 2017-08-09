@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <excludeFromCompile>
-      <file url="file://$PROJECT_DIR$/src/main/java/edu/uchsc/ccp/knowtator/SlotMentionWidget.java" />
+      <directory url="file://$PROJECT_DIR$/src/main/java/edu/uchsc" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">

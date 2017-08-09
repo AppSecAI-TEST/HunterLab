@@ -92,6 +92,7 @@ import edu.uchsc.ccp.knowtator.event.EventHandler;
 import edu.uchsc.ccp.knowtator.event.RefreshAnnotationsDisplayListener;
 import edu.uchsc.ccp.knowtator.util.ProtegeUtil;
 
+@SuppressWarnings({"unused", "PackageAccessibility", "JavaDoc", "Duplicates", "MismatchedQueryAndUpdateOfCollection"})
 public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDisplayListener,
 															AnnotationCreatedListener,
 															AcceptedAnnotationListener {
@@ -100,76 +101,74 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		clearSelectionHighlights();
 	}
 
-	public static final int NO_LINES = 0;
+	private static final int NO_LINES = 0;
 
-	public static final int SOLID_LINES = 1;
+	private static final int SOLID_LINES = 1;
 
-	public static final int DASHED_LINES = 2;
+	private static final int DASHED_LINES = 2;
 
-	public static final int VERTICAL_LINES = 3;
+	private static final int VERTICAL_LINES = 3;
 
-	Logger logger = Logger.getLogger(KnowtatorTextPane.class);
+	private static Logger logger = Logger.getLogger(KnowtatorTextPane.class);
 
 	static final long serialVersionUID = 0;
 
-	Set<Span> annotationSpans;
+	private Set<Span> annotationSpans;
 
-	Map<Span, Color> annotationSpanColors;
+	private Map<Span, Color> annotationSpanColors;
 
-	Map<Span, Integer> annotationSpanLines;
+	private Map<Span, Integer> annotationSpanLines;
 
-	Map<Span, String> annotationSpanSubtexts;
+	private Map<Span, String> annotationSpanSubtexts;
 
-	List<Span> selectionSpans;
+	private List<Span> selectionSpans;
 
-	List<Span> selectedAnnotationSpans;
+	private List<Span> selectedAnnotationSpans;
 
 	// we don't need selectionSpanColors because we will always use
 	// getSelectionColor for selection spans
 
-	Map<Color, KnowtatorHighlighter> painters;
+	private Map<Color, KnowtatorHighlighter> painters;
 
-	Map<Color, KnowtatorHighlighter> linePainters;
+	private Map<Color, KnowtatorHighlighter> linePainters;
 
-	Map<Color, KnowtatorHighlighter> dashedLinePainters;
+	private Map<Color, KnowtatorHighlighter> dashedLinePainters;
 
-	Map<Color, KnowtatorHighlighter> verticalLinePainters;
+	private Map<Color, KnowtatorHighlighter> verticalLinePainters;
 
-	String text = "";
+	private String text = "";
 
 	KnowtatorManager manager;
 
-	AnnotationUtil annotationUtil;
+	private AnnotationUtil annotationUtil;
 
-	MentionUtil mentionUtil;
+	private MentionUtil mentionUtil;
 
-	DisplayColors displayColors;
+	private DisplayColors displayColors;
 
-	BrowserTextUtil browserTextUtil;
+	private BrowserTextUtil browserTextUtil;
 
-	SpanUtil spanUtil;
+	private SpanUtil spanUtil;
 
-	String tokenRegex = null;
+	private String tokenRegex = null;
 
-	Pattern tokenPattern;
+	private Pattern tokenPattern;
 
-	Highlighter highlighter;
+	private Highlighter highlighter;
 
-	Color lineHighlightColor = Color.BLACK;
+	private static Color lineHighlightColor = Color.BLACK;
 
-	Map<Integer, Set<SimpleInstance>> window2AnnotationsMap;
+	private Map<Integer, Set<SimpleInstance>> window2AnnotationsMap;
 
-	int windowSize = 20;
+	private int windowSize = 20;
 
-	JPopupMenu popupMenu;
+	private JPopupMenu popupMenu;
 
-	boolean mouseButtonDown = false;
+	private boolean mouseButtonDown = false;
 
-	JScrollPane scrollPane;
+	private Style doubleSpace;
 
-	Style doubleSpace;
-
-	boolean initComplete = false;
+	private boolean initComplete = false;
 	
 	/** Contains the previous offset that was selected by the mouse. */
 	private int previousOffset = 0;
@@ -250,7 +249,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public void highlightSpans(boolean scrollToSelection) {
+	private void highlightSpans(boolean scrollToSelection) {
 
 		logger.debug("");
 		SimpleInstance selectedAnnotation = manager.getSelectedAnnotation();
@@ -258,9 +257,8 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		highlightSpans(selectedAnnotation, visibleAnnotations, scrollToSelection);
 	}
 
-	public void setScrollPane(JScrollPane scrollPane) {
+	void setScrollPane(JScrollPane scrollPane) {
 		logger.debug("");
-		this.scrollPane = scrollPane;
 	}
 
 	public void setAnnotationUtil(AnnotationUtil annotationUtil) {
@@ -273,7 +271,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		this.displayColors = displayColors;
 	}
 
-	public void updateTokenRegex() {
+	private void updateTokenRegex() {
 		logger.debug("");
 		if (tokenRegex == null) {
 			tokenRegex = manager.getTokenRegex();
@@ -316,9 +314,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 	public boolean select(Span span, boolean isNew) {
 		logger.debug("");
 		select(span);
-		if (annotationSpans.contains(span))
-			return true;
-		return false;
+		return annotationSpans.contains(span);
 	}
 
 	public void select(Collection<Span> spans) {
@@ -335,7 +331,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public void addAnnotationHighlights(Collection<Span> spans, Color color, int lines) {
+	private void addAnnotationHighlights(Collection<Span> spans, Color color, int lines) {
 		logger.debug("");
 		for (Span span : spans) {
 			if (annotationSpans.contains(span))
@@ -346,7 +342,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public void clearHighlights() {
+	private void clearHighlights() {
 		logger.debug("");
 		clearAnnotationHighlights();
 		// clearSelectionHighlights();
@@ -359,7 +355,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		repaint();
 	}
 
-	public void clearAnnotationHighlights() {
+	private void clearAnnotationHighlights() {
 		logger.debug("");
 		annotationSpans.clear();
 		annotationSpanColors.clear();
@@ -408,35 +404,29 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		Collections.sort(sortedSpans);
 
 		for (int i = 0; i < sortedSpans.size(); i++) {
-			if (i == 0 || i == sortedSpans.size() - 1)
-				continue;
-			else {
+			if (i != 0 && i != sortedSpans.size() - 1) {
 				Span previousSpan = sortedSpans.get(i - 1);
 				Span currentSpan = sortedSpans.get(i);
 				if (previousSpan.getEnd() == currentSpan.getStart()) {
-					if (annotationSpanLines.containsKey(currentSpan)
-							&& annotationSpanLines.get(currentSpan) != NO_LINES) {
-						continue;
-					} else {
-						annotationSpanLines.put(currentSpan, VERTICAL_LINES);
-						highlightSpan(currentSpan, annotationSpanColors.get(currentSpan), VERTICAL_LINES);
-					}
+					if (!annotationSpanLines.containsKey(currentSpan)
+							|| annotationSpanLines.get(currentSpan) == NO_LINES) {
+                                annotationSpanLines.put(currentSpan, VERTICAL_LINES);
+                                highlightSpan(currentSpan, annotationSpanColors.get(currentSpan), VERTICAL_LINES);
+                            }
 				}
 			}
 		}
 	}
 
-	private Object highlightSpan(Span span, Color color, int lines) {
+	private void highlightSpan(Span span, Color color, int lines) {
 		try {
 			int start = Math.max(0, span.getStart());
 			int end = Math.min(span.getEnd(), text.length() - 1);
 			KnowtatorHighlighter painter = getHighlightPainter(color, lines);
 
 			Object highlight = highlighter.addHighlight(start, end, painter);
-			return highlight;
 		} catch (BadLocationException ble) {
 			ble.printStackTrace();
-			return null;
 		}
 	}
 
@@ -462,7 +452,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 	 * @param annotation
 	 * @see AnnotationPicker#mouseMoved(MouseEvent)
 	 */
-	public void highlightAnnotationTemp(SimpleInstance annotation) {
+	void highlightAnnotationTemp(SimpleInstance annotation) {
 		logger.debug("");
 		hideHighlights();
 		try {
@@ -477,7 +467,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 												 // highlighted text.
 			} else {
 				Set<SimpleInstance> referencedAnnotations = annotationUtil
-						.getRelatedAnnotations((SimpleInstance) annotation);
+						.getRelatedAnnotations(annotation);
 				boolean textSelectionChanged = false; // we only want to do a
 													  // textPane.select(int)
 													  // once see comment below.
@@ -520,7 +510,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public void highlightSelectedInstance(SimpleInstance selectedAnnotation, boolean scrollToSelection) throws InvalidSpanException {
+	private void highlightSelectedInstance(SimpleInstance selectedAnnotation, boolean scrollToSelection) throws InvalidSpanException {
 		logger.debug("");
 		selectedAnnotationSpans.clear();
 		if (selectedAnnotation != null) {
@@ -528,7 +518,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 			java.util.List<Span> spans;
 
 			Set<SimpleInstance> referencedAnnotations = annotationUtil
-					.getRelatedAnnotations((SimpleInstance) selectedAnnotation);
+					.getRelatedAnnotations(selectedAnnotation);
 
 			boolean textSelectionChanged = false; // we only want to do a
 												  // textPane.select(int) once
@@ -567,14 +557,14 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public void highlightSpans(SimpleInstance selectedAnnotation, java.util.List<SimpleInstance> annotations, boolean scrollToSelection)
+	private void highlightSpans(SimpleInstance selectedAnnotation, java.util.List<SimpleInstance> annotations, boolean scrollToSelection)
 			throws InvalidSpanException {
 		logger.debug("");
 		clearHighlights();
 		highlightSelectedInstance(selectedAnnotation, scrollToSelection);
 		Set<SimpleInstance> referencedAnnotations;
 		if (selectedAnnotation != null)
-			referencedAnnotations = annotationUtil.getRelatedAnnotations((SimpleInstance) selectedAnnotation);
+			referencedAnnotations = annotationUtil.getRelatedAnnotations(selectedAnnotation);
 		else
 			referencedAnnotations = Collections.emptySet();
 
@@ -618,9 +608,9 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	public List<SimpleInstance> getAnnotationsAt(int offset) {
+	private List<SimpleInstance> getAnnotationsAt(int offset) {
 		logger.debug("");
-		Integer key = new Integer(offset / windowSize);
+		Integer key = offset / windowSize;
 		List<SimpleInstance> returnValues = new ArrayList<SimpleInstance>();
 		if (window2AnnotationsMap.containsKey(key)) {
 			Set<SimpleInstance> candidateAnnotations = window2AnnotationsMap.get(key);
@@ -707,7 +697,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		previousOffset = offset;
 		
 		List<SimpleInstance> clickedAnnotations = new ArrayList<SimpleInstance>(getAnnotationsAt(offset));
-		if (clickedAnnotations == null || clickedAnnotations.size() == 0)
+		if (clickedAnnotations.size() == 0)
 			return;
 		Collections.sort(clickedAnnotations, spanUtil.comparator(browserTextUtil.comparator()));
 
@@ -847,11 +837,11 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 			popupMenu.show(mouseEvent.getComponent(), mouseEvent.getX(), mouseEvent.getY() + 10);
 	}
 
-	private String getSubtext(SimpleInstance annotation) {
+	private void getSubtext(SimpleInstance annotation) {
 		try {
 			Slot subtextSlot = manager.getSubtextSlot();
 			if (subtextSlot == null)
-				return null;
+				return;
 			SimpleInstance mention = annotationUtil.getMention(annotation);
 			SimpleInstance slotMention = mentionUtil.getSlotMention(mention, subtextSlot);
 			List<Object> slotValues = mentionUtil.getSlotMentionValues(slotMention);
@@ -863,13 +853,10 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 						annotationSpanSubtexts.put(span, subtext);
 				}
 
-				return subtext;
 			}
-		} catch (NullPointerException npe) {
-			return null;
+		} catch (NullPointerException ignored) {
 		}
 
-		return null;
 	}
 
 	private KnowtatorHighlighter getHighlightPainter(Color color, int lines) {
@@ -899,7 +886,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 	 * DefaultHighlighter.DefaultHighlightPainter and modified to draw lines
 	 * above and below the selected annotation.
 	 */
-	class KnowtatorHighlighter extends DefaultHighlighter.DefaultHighlightPainter {
+	public static class KnowtatorHighlighter extends DefaultHighlighter.DefaultHighlightPainter {
 
 		public KnowtatorHighlighter(Color c) {
 			super(c);
@@ -915,23 +902,23 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 			g.setFont(new Font(textFont.getName(), textFont.getStyle(), fontSize));
 
 			Rectangle rec = getRectangle(offs0, offs1, bounds, view);
-			if (rec != null) {
-				int start = viewToModel(new Point(rec.x, rec.y));
-				int end = viewToModel(new Point(rec.x + rec.width, rec.y));
-				String subtext = annotationSpanSubtexts.get(new Span(start, end));
-				if (subtext != null) {
-					FontMetrics fontMetrics = g.getFontMetrics();
-					int stringWidth = fontMetrics.stringWidth(subtext);
-					int startPoint = rec.x + (rec.width / 2);
-					startPoint = startPoint - (stringWidth / 2);
-					startPoint = Math.max(0, startPoint);
-					g.drawString(subtext, startPoint, rec.y + rec.height + fontSize + 3);
-				}
-			}
+//			if (rec != null) {
+//				int start = viewToModel(new Point(rec.x, rec.y));
+//				int end = viewToModel(new Point(rec.x + rec.width, rec.y));
+//				String subtext = annotationSpanSubtexts.get(new Span(start, end));
+//				if (subtext != null) {
+//					FontMetrics fontMetrics = g.getFontMetrics();
+//					int stringWidth = fontMetrics.stringWidth(subtext);
+//					int startPoint = rec.x + (rec.width / 2);
+//					startPoint = startPoint - (stringWidth / 2);
+//					startPoint = Math.max(0, startPoint);
+//					g.drawString(subtext, startPoint, rec.y + rec.height + fontSize + 3);
+//				}
+//			}
 			return returnValue;
 		}
 
-		public Rectangle getRectangle(int offs0, int offs1, Shape bounds, View view) {
+		protected Rectangle getRectangle(int offs0, int offs1, Shape bounds, View view) {
 			logger.debug("");
 			Rectangle rec = null;
 			if (offs0 == view.getStartOffset() && offs1 == view.getEndOffset()) {
@@ -940,7 +927,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 				try {
 					Shape shape = view.modelToView(offs0, Position.Bias.Forward, offs1, Position.Bias.Backward, bounds);
 					rec = (shape instanceof Rectangle) ? (Rectangle) shape : shape.getBounds();
-				} catch (BadLocationException e) {
+				} catch (BadLocationException ignored) {
 				}
 			}
 			return rec;
@@ -952,7 +939,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 	 * DefaultHighlighter.DefaultHighlightPainter and modified to draw lines
 	 * above and below the selected annotation.
 	 */
-	class KnowtatorSelectionHighlighter extends KnowtatorHighlighter {
+	public static class KnowtatorSelectionHighlighter extends KnowtatorHighlighter {
 		public KnowtatorSelectionHighlighter(Color c) {
 			super(c);
 		}
@@ -974,7 +961,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	class KnowtatorDashedHighlighter extends KnowtatorHighlighter {
+	public static class KnowtatorDashedHighlighter extends KnowtatorHighlighter {
 		public KnowtatorDashedHighlighter(Color c) {
 			super(c);
 		}
@@ -1006,7 +993,7 @@ public class KnowtatorTextPane extends JTextPane implements RefreshAnnotationsDi
 		}
 	}
 
-	class KnowtatorVerticalHighlighter extends KnowtatorHighlighter {
+	public static class KnowtatorVerticalHighlighter extends KnowtatorHighlighter {
 		public KnowtatorVerticalHighlighter(Color c) {
 			super(c);
 		}

@@ -1,10 +1,11 @@
-package edu.ucdenver.cpbs.mechanic.ui;
+package edu.ucdenver.cpbs.mechanic;
 
 import org.semanticweb.owlapi.model.OWLClass;
 
 import java.util.ArrayList;
 
 public class MechAnICSelectionModel {
+
     private OWLClass selectedClass;
 
     private ArrayList<MechAnICSelectionListener> listeners;

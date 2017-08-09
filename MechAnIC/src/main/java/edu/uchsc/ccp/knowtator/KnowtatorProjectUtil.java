@@ -50,7 +50,9 @@ import edu.stanford.smi.protege.model.SimpleInstance;
 import edu.stanford.smi.protege.model.Slot;
 import edu.stanford.smi.protege.util.CollectionUtilities;
 import edu.uchsc.ccp.knowtator.util.ProjectUtil;
+import org.semanticweb.owlapi.model.OWLClass;
 
+@SuppressWarnings("ALL")
 public class KnowtatorProjectUtil {
 	public static final String KNOWTATOR_SUPPORT_CLS_NAME = "knowtator support class";
 

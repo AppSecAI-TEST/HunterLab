@@ -67,9 +67,9 @@ public class AnnotationSpanIndex {
 
 		// for(Integer window : window2AnnotationsMap.keySet())
 		// {
-		// Set<Annotation> windowAnnotations =
+		// Set<TextAnnotation> windowAnnotations =
 		// window2AnnotationsMap.get(window);
-		// for(Annotation windowAnnotation : windowAnnotations)
+		// for(TextAnnotation windowAnnotation : windowAnnotations)
 		// {
 		// Collection<Span> spans = windowAnnotation.getSpans();
 		// }

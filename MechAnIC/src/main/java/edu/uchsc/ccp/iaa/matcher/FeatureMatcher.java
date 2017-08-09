@@ -80,11 +80,11 @@ public class FeatureMatcher implements Matcher {
 				candidateAnnotations.addAll(iaa.getAnnotationsOfSameType(annotation, compareSetName));
 				candidateAnnotations.retainAll(iaa.getExactlyOverlappingAnnotations(annotation, compareSetName));
 			} else if (matchSpans == Annotation.SPANS_OVERLAP_COMPARISON) {
-				// Set<Annotation> someAnnotations =
+				// Set<TextAnnotation> someAnnotations =
 				// iaa.getExactlyOverlappingAnnotations(annotation,
 				// compareSetName);
 				//					
-				// Set<Annotation> someAnnotations =
+				// Set<TextAnnotation> someAnnotations =
 				// iaa.getExactlyOverlappingAnnotations(annotation,
 				// compareSetName);
 				//					

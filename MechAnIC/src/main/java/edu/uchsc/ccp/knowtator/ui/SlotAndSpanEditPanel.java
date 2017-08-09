@@ -277,11 +277,11 @@ public class SlotAndSpanEditPanel extends JPanel
 		if( manager.isConsensusMode() ) {
 			if( manager.isTeamAnnotation( selectedAnnotation ) ) {
 				consensusStatusIconLabel.setIcon(greenCheckIcon);
-				consensusStatusIconLabel.setToolTipText( "Annotation has been accepted as the consensus team annotation" );
+				consensusStatusIconLabel.setToolTipText( "TextAnnotation has been accepted as the consensus team annotation" );
 			} else {
 				if( selectedAnnotation != null ) {
 					consensusStatusIconLabel.setIcon(redCrossIcon);
-					consensusStatusIconLabel.setToolTipText( "Annotation has NOT yet been accepted as the consensus team annotation" );
+					consensusStatusIconLabel.setToolTipText( "TextAnnotation has NOT yet been accepted as the consensus team annotation" );
 				} else {
 					consensusStatusIconLabel.setIcon( null );
 					consensusStatusIconLabel.setToolTipText( null );

@@ -114,7 +114,7 @@ public class SpanWidget extends StringListWidget {
 						"Select Span First", JOptionPane.INFORMATION_MESSAGE);
 			}
 		} catch (InvalidSpanException ise) {
-			JOptionPane.showMessageDialog(this, "Annotation has an invalid span value: " + ise.getMessage(),
+			JOptionPane.showMessageDialog(this, "TextAnnotation has an invalid span value: " + ise.getMessage(),
 					"Invalid span", JOptionPane.ERROR_MESSAGE);
 		} catch (TextSourceAccessException tsae) {
 			JOptionPane.showMessageDialog(null, "There was a problem retrieving the text from the text source: "
@@ -129,7 +129,7 @@ public class SpanWidget extends StringListWidget {
 					(SimpleInstance) getInstance(), true), null);
 			manager.refreshAnnotationsDisplay(true);
 		} catch (InvalidSpanException ise) {
-			JOptionPane.showMessageDialog(this, "Annotation has an invalid span value: " + ise.getMessage(),
+			JOptionPane.showMessageDialog(this, "TextAnnotation has an invalid span value: " + ise.getMessage(),
 					"Invalid span", JOptionPane.ERROR_MESSAGE);
 		} catch (TextSourceAccessException tsae) {
 			JOptionPane.showMessageDialog(null, "There was a problem retrieving the text from the text source: "

@@ -83,7 +83,7 @@ public class AnnotationCleanup {
 
 		JOptionPane.showMessageDialog(parent, "Removal of annotations complete.\n"
 				+ "To undo changes, please close the project\n" + "without saving it and re-open it.",
-				"Annotation removal complete", JOptionPane.INFORMATION_MESSAGE);
+				"TextAnnotation removal complete", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 	public static void cleanup(SimpleInstance filter, FilterUtil filterUtil, Collection<SimpleInstance> textSources,
