@@ -1,6 +1,6 @@
 package edu.ucdenver.cpbs.mechanic.Commands;
 
-import edu.ucdenver.cpbs.mechanic.TextAnnotation.TextAnnotationUtil;
+import edu.ucdenver.cpbs.mechanic.ui.TextAnnotationProfileViewer;
 import org.protege.editor.core.ui.util.Icons;
 import org.protege.editor.core.ui.view.DisposableAction;
 
@@ -10,12 +10,12 @@ import java.awt.event.ActionEvent;
 
 public class AddNewHighlighterProfile extends DisposableAction {
 
-    private TextAnnotationUtil textAnnotationUtil;
+    private TextAnnotationProfileViewer profileViewer;
 
-    public AddNewHighlighterProfile(TextAnnotationUtil textAnnotationUtil) {
+    public AddNewHighlighterProfile(TextAnnotationProfileViewer profileViewer) {
         super("Add Highlighter Profile", Icons.getIcon("add_highlighter.png"));
+        this.profileViewer = profileViewer;
         this.putValue(AbstractAction.SHORT_DESCRIPTION, "Add a new highlighter profile");
-        this.textAnnotationUtil = textAnnotationUtil;
 
     }
 
@@ -40,8 +40,10 @@ public class AddNewHighlighterProfile extends DisposableAction {
             String profileName = field1.getText();
 
             Color c = JColorChooser.showDialog(null, "Highlighter color", Color.BLUE);
-            textAnnotationUtil.addHighlighter(profileName, c);
-            textAnnotationUtil.setCurrentHighlighterProfile(profileName);
+            if (c != null) {
+                profileViewer.addProfile(profileName, c);
+                profileViewer.setCurrentProfile(profileName);
+            }
         }
 
     }

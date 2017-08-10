@@ -2,6 +2,7 @@ package edu.ucdenver.cpbs.mechanic;
 
 import edu.ucdenver.cpbs.mechanic.TextAnnotation.TextAnnotationUtil;
 import edu.ucdenver.cpbs.mechanic.Commands.*;
+import edu.ucdenver.cpbs.mechanic.ui.TextAnnotationProfileViewer;
 import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
 import org.apache.log4j.Logger;
 import org.protege.editor.owl.ui.view.cls.AbstractOWLClassViewComponent;
@@ -16,13 +17,14 @@ import java.io.IOException;
 
 import static edu.ucdenver.cpbs.mechanic.Commands.OpenDocumentCommand.openInitialFile;
 
-
 @SuppressWarnings("PackageAccessibility")
 public class MechAnICView extends AbstractOWLClassViewComponent implements DropTargetListener {
 
     private static final Logger log = Logger.getLogger(MechAnICView.class);
 
+    private JSplitPane splitPane;
     private JTabbedPane tabbedPane;
+    private TextAnnotationProfileViewer profileViewer;
 
     private TextAnnotationUtil textAnnotationUtil;
     private MechAnICSelectionModel selectionModel;
@@ -51,8 +53,19 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         setLayout(new BorderLayout());
 
         tabbedPane = new JTabbedPane();
-        add(tabbedPane);
+        tabbedPane.setMinimumSize(new Dimension(100, 50));
         openInitialFile("C:/Users/Harrison/Documents/test_article.txt", tabbedPane);
+
+        profileViewer = new TextAnnotationProfileViewer();
+        profileViewer.setMinimumSize(new Dimension(100, 50));
+        textAnnotationUtil.setProfileViewer(profileViewer);
+
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        splitPane.setOneTouchExpandable(true);
+        splitPane.setDividerLocation(250);
+        add(splitPane);
+        splitPane.add(tabbedPane);
+        splitPane.add(profileViewer);
 
         setupListeners();
 
@@ -67,14 +80,11 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         addAction(new SetAnnotator(textAnnotationUtil), "B", "A");
         addAction(new AddTextAnnotation(textAnnotationUtil, tabbedPane, selectionModel), "B", "B");
         addAction(new LoadAnnotations(textAnnotationUtil, tabbedPane), "B", "C");
-        addAction(new AddNewHighlighterProfile(textAnnotationUtil), "C", "A");
+        addAction(new AddNewHighlighterProfile(profileViewer), "C", "A");
     }
 
     private void setupListeners() {
     }
-
-
-
 
     @Override
     public void disposeView() {

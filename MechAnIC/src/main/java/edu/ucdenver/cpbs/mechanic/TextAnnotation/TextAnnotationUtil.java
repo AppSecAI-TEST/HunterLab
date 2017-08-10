@@ -1,6 +1,7 @@
 package edu.ucdenver.cpbs.mechanic.TextAnnotation;
 
 import edu.ucdenver.cpbs.mechanic.MechAnICView;
+import edu.ucdenver.cpbs.mechanic.ui.TextAnnotationProfileViewer;
 import org.protege.editor.owl.model.find.OWLEntityFinder;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.search.EntitySearcher;
@@ -10,11 +11,9 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javax.swing.*;
-import javax.swing.text.DefaultHighlighter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -41,9 +40,10 @@ public final class TextAnnotationUtil {
    private HashMap<String, String> clsList;
    private HashMap<String, String> classInfo;
    private HashMap<String, Integer> instancesTracker;
-   private HashMap<String, DefaultHighlighter.DefaultHighlightPainter> highlighterPainters;
    private MechAnICView view;
-   private String currentHighlighterProfile;
+
+   private TextAnnotationProfileViewer profileViewer;
+
 
     public TextAnnotationUtil(MechAnICView view) throws ParserConfigurationException {
         this.view = view;
@@ -53,7 +53,6 @@ public final class TextAnnotationUtil {
         this.clsList = new HashMap<String, String>();
         this.classInfo  = new HashMap<String, String>();
         this.instancesTracker = new HashMap<String, Integer>();
-        this.highlighterPainters = new HashMap<String, DefaultHighlighter.DefaultHighlightPainter>();
     }
 
     public void loadTextAnnotationsFromXML(String fileName, JTabbedPane tabbedPane) throws ParserConfigurationException, IOException, SAXException {
@@ -63,7 +62,7 @@ public final class TextAnnotationUtil {
 
         for (Node node: asList(doc.getElementsByTagName("annotation"))) {
             if (node.getNodeType() == Node.ELEMENT_NODE) {
-                textAnnotations.add(new TextAnnotation(node, tabbedPane, this));
+                textAnnotations.add(new TextAnnotation(node, tabbedPane, profileViewer));
             }
         }
         for (Node node : asList(doc.getElementsByTagName("classMention"))) {
@@ -131,7 +130,7 @@ public final class TextAnnotationUtil {
 
         classInfo.put(classID, className);
         clsList.put(mention, classID);
-        textAnnotations.add(new TextAnnotation(mention, currentAnnotatorID, currentAnnotator, spanStart, spanEnd, spannedText, tabbedPane, this));
+        textAnnotations.add(new TextAnnotation(mention, currentAnnotatorID, currentAnnotator, spanStart, spanEnd, spannedText, tabbedPane, profileViewer));
     }
 
     public void setCurrentAnnotator(String currentAnnotator, String currentAnnotatorID) {
@@ -166,15 +165,7 @@ public final class TextAnnotationUtil {
         bw.flush();
     }
 
-    public void addHighlighter(String highlighterProfile, Color c) {
-        highlighterPainters.put(highlighterProfile, new DefaultHighlighter.DefaultHighlightPainter(c));
-    }
-
-    public void setCurrentHighlighterProfile(String profile) {
-        currentHighlighterProfile = profile;
-    }
-
-    DefaultHighlighter.DefaultHighlightPainter getCurrentHighlighter() {
-        return highlighterPainters.get(currentHighlighterProfile);
+    public void setProfileViewer(TextAnnotationProfileViewer profileViewer) {
+        this.profileViewer = profileViewer;
     }
 }

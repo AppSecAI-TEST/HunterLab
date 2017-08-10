@@ -1,5 +1,6 @@
 package edu.ucdenver.cpbs.mechanic.TextAnnotation;
 
+import edu.ucdenver.cpbs.mechanic.ui.TextAnnotationProfileViewer;
 import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -28,17 +29,17 @@ public class TextAnnotation {
     private Integer spanEnd;
     private String spannedText;
 
-    public TextAnnotation(String mention, String annotatorID, String annotator, Integer spanStart, Integer spanEnd, String spannedText, JTabbedPane tabbedPane, TextAnnotationUtil textAnnotationUtil) {
+    public TextAnnotation(String mention, String annotatorID, String annotator, Integer spanStart, Integer spanEnd, String spannedText, JTabbedPane tabbedPane, TextAnnotationProfileViewer profileViewer) {
         this.mention = mention;
         this.annotatorID = annotatorID;
         this.annotator = annotator;
         this.spanStart = spanStart;
         this.spanEnd = spanEnd;
         this.spannedText = spannedText;
-        highlightAnnotation(spanStart, spanEnd, tabbedPane, textAnnotationUtil);
+        highlightAnnotation(spanStart, spanEnd, tabbedPane, profileViewer);
     }
 
-    public TextAnnotation(Node node, JTabbedPane tabbedPane, TextAnnotationUtil textAnnotationUtil) {
+    public TextAnnotation(Node node, JTabbedPane tabbedPane, TextAnnotationProfileViewer profileViewer) {
 
         Element eElement = (Element)node;
 
@@ -48,13 +49,13 @@ public class TextAnnotation {
         this.spanStart = Integer.parseInt(((Element)eElement.getElementsByTagName(SPAN).item(0)).getAttribute(SPAN_START));
         this.spanEnd = Integer.parseInt(((Element)eElement.getElementsByTagName(SPAN).item(0)).getAttribute(SPAN_END));
         this.spannedText = eElement.getElementsByTagName(SPANNEDTEXT).item(0).getTextContent();
-        highlightAnnotation(spanStart, spanEnd, tabbedPane, textAnnotationUtil);
+        highlightAnnotation(spanStart, spanEnd, tabbedPane, profileViewer);
     }
 
-    private void highlightAnnotation(int spanStart, int spanEnd, JTabbedPane tabbedPane, TextAnnotationUtil textAnnotationUtil) {
+    private void highlightAnnotation(int spanStart, int spanEnd, JTabbedPane tabbedPane, TextAnnotationProfileViewer profileViewer) {
         TextViewer selectedComponent = (TextViewer)((JScrollPane)tabbedPane.getSelectedComponent()).getViewport().getView();
         try {
-            selectedComponent.getHighlighter().addHighlight(spanStart, spanEnd, textAnnotationUtil.getCurrentHighlighter());
+            selectedComponent.getHighlighter().addHighlight(spanStart, spanEnd, profileViewer.getCurrentHighlighter());
         } catch (BadLocationException e) {
             e.printStackTrace();
         }
