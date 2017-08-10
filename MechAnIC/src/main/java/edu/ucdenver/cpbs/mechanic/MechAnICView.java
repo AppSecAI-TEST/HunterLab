@@ -7,15 +7,13 @@ import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
 import org.apache.log4j.Logger;
 import org.protege.editor.owl.ui.view.cls.AbstractOWLClassViewComponent;
 import org.semanticweb.owlapi.model.*;
+import org.xml.sax.SAXException;
 
 import javax.swing.*;
+import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
 import java.awt.dnd.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
-import static edu.ucdenver.cpbs.mechanic.Commands.OpenDocumentCommand.openInitialFile;
+import java.io.*;
 
 @SuppressWarnings("PackageAccessibility")
 public class MechAnICView extends AbstractOWLClassViewComponent implements DropTargetListener {
@@ -40,6 +38,7 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         DropTarget dt = new DropTarget(this, this);
         dt.setActive(true);
 
+        setupTest();
         log.warn("Initialized MechAnIC");
     }
 
@@ -54,7 +53,6 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
 
         tabbedPane = new JTabbedPane();
         tabbedPane.setMinimumSize(new Dimension(100, 50));
-        openInitialFile("C:/Users/Harrison/Documents/test_article.txt", tabbedPane);
 
         profileViewer = new TextAnnotationProfileViewer();
         profileViewer.setMinimumSize(new Dimension(100, 50));
@@ -70,7 +68,36 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         setupListeners();
 
         createToolBar();
+    }
 
+    private void setupTest() {
+        try {
+            String fileName = "/file/test_article.txt";
+            TextViewer textViewer = new TextViewer();
+            textViewer.setName(fileName);
+            JScrollPane sp = new JScrollPane(textViewer);
+            tabbedPane.add(sp);
+            tabbedPane.setTitleAt(0, fileName);
+
+            InputStream is = getClass().getResourceAsStream(fileName);
+            textViewer.read(new BufferedReader(new InputStreamReader(is)), fileName);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            String fileName = "/file/test_annotations.xml";
+            InputStream is = getClass().getResourceAsStream(fileName);
+            textAnnotationUtil.loadTextAnnotationsFromXML(is, tabbedPane);
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
     }
 
     private void createToolBar() {

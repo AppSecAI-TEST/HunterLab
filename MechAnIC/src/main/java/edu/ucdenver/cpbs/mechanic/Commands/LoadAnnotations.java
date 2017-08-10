@@ -10,6 +10,8 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.ParserConfigurationException;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class LoadAnnotations extends DisposableAction {
@@ -39,7 +41,7 @@ public class LoadAnnotations extends DisposableAction {
 
         if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
-                textAnnotationUtil.loadTextAnnotationsFromXML(fileChooser.getSelectedFile().getAbsolutePath(), tabbedPane);
+                textAnnotationUtil.loadTextAnnotationsFromXML(new FileInputStream(new File(fileChooser.getSelectedFile().getAbsolutePath())), tabbedPane);
             } catch (IOException e1) {
                 e1.printStackTrace();
             } catch (SAXException e1) {

@@ -14,10 +14,7 @@ import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 import java.util.List;
 
@@ -28,7 +25,7 @@ public final class TextAnnotationUtil {
     private String TEXTSOURCE = "textSource";
     private String CLASS_MENTION = "classMention";
     private String CLASS_MENTION_ID = "id";
-    private String MENTION_CLASS = "menitonClass";
+    private String MENTION_CLASS = "mentionClass";
     private String MENTION_CLASS_ID = "id";
 
     private DocumentBuilder dBuilder;
@@ -55,9 +52,9 @@ public final class TextAnnotationUtil {
         this.instancesTracker = new HashMap<String, Integer>();
     }
 
-    public void loadTextAnnotationsFromXML(String fileName, JTabbedPane tabbedPane) throws ParserConfigurationException, IOException, SAXException {
+    public void loadTextAnnotationsFromXML(InputStream is, JTabbedPane tabbedPane) throws ParserConfigurationException, IOException, SAXException {
 
-        Document doc = dBuilder.parse(new File(fileName));
+        Document doc = dBuilder.parse(is);
         doc.getDocumentElement().normalize();
 
         for (Node node: asList(doc.getElementsByTagName("annotation"))) {
@@ -68,7 +65,7 @@ public final class TextAnnotationUtil {
         for (Node node : asList(doc.getElementsByTagName("classMention"))) {
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element)node;
-                String mention = ((Element)eElement.getElementsByTagName(CLASS_MENTION).item(0)).getAttribute(CLASS_MENTION_ID);
+                String mention = eElement.getAttribute(CLASS_MENTION_ID);
                 String classID = ((Element)eElement.getElementsByTagName(MENTION_CLASS).item(0)).getAttribute(MENTION_CLASS_ID);
                 String className = eElement.getElementsByTagName(MENTION_CLASS).item(0).getTextContent();
                 classInfo.put(classID, className);

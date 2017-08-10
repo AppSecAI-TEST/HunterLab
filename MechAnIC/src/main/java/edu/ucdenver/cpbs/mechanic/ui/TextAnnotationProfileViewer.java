@@ -15,10 +15,12 @@ public class TextAnnotationProfileViewer extends JPanel implements ActionListene
 
     public TextAnnotationProfileViewer() {
         super(new GridLayout(0, 1));
-        Border border = BorderFactory.createTitledBorder("Text Annotation Profiles");this.highlighterPainters = new HashMap<String, DefaultHighlighter.DefaultHighlightPainter>();
+        Border border = BorderFactory.createTitledBorder("Text Annotation Profiles");
+        this.highlighterPainters = new HashMap<String, DefaultHighlighter.DefaultHighlightPainter>();
         setBorder(border);
 
         buttonGroup = new ButtonGroup();
+        addProfile("Default", Color.RED);
     }
 
     public void addProfile(String profileName, Color c) {
@@ -26,11 +28,14 @@ public class TextAnnotationProfileViewer extends JPanel implements ActionListene
         JRadioButton profileSelector = new JRadioButton(profileName);
         profileSelector.setSelected(true);
         profileSelector.setActionCommand(profileName);
+        profileSelector.setForeground(c);
 
         buttonGroup.add(profileSelector);
         profileSelector.addActionListener(this);
         add(profileSelector);
         repaint();
+
+        setCurrentProfile(profileName);
     }
 
     public void setCurrentProfile(String profile) {

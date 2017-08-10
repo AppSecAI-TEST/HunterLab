@@ -9,6 +9,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -43,22 +44,6 @@ public class OpenDocumentCommand extends DisposableAction {
                 tabbedPane.add(sp);
             }
             tabbedPane.setTitleAt(tabbedPane.getTabCount() - 1, fileName);
-
-            textViewer.read(new BufferedReader(new FileReader(fileName)), fileName);
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void openInitialFile(String fileName, JTabbedPane tabbedPane) {
-        try {
-            TextViewer textViewer = new TextViewer();
-            textViewer.setName(fileName);
-            JScrollPane sp = new JScrollPane(textViewer);
-            tabbedPane.add(sp);
-            tabbedPane.setTitleAt(0, fileName);
 
             textViewer.read(new BufferedReader(new FileReader(fileName)), fileName);
 
