@@ -1,7 +1,7 @@
-#MechAnIC
+# MechAnIC
 Plugin for Protege: Mechanism Annotation and Inference Console
 
-##Installation and Setup:
+## Installation and Setup:
 
 1. Install [Protege 5.X.X][protege link]
 2. Copy MechAnIC.jar to Protege.X.X/plugins/
@@ -15,23 +15,23 @@ Plugin for Protege: Mechanism Annotation and Inference Console
 ![After installation][installation image]
 Add as a View to a Protege tab by going to Menu -> Views -> Ontology Views -> MechAnIC
 
-##Features
+## Features
 
-####Annotation highlighting
+#### Annotation highlighting
 Click on OWL class in Class hierarchy to select a term. Annotate the text by highlighting it and then clicking "Add TextAnnotation". 
 
-####Load plain text documents
+#### Load plain text documents
 
-####Annotation profiles
+#### Annotation profiles
 Create annotation profiles and assign them different colors. Switch between them quickly with by selecting them on the right.
 
-####Save annotations to XML file
+#### Save annotations to XML file
 Annotations can be saved as an XML file. This stores the annotation instance, the text span, the ontology term ID and the ontology term RDFS label.
 
-####Reload annotations
+#### Reload annotations
 Annotations are reloaded and automatically highlight the text using the color of the current profile.
 
-###Known bugs
+### Known bugs
 1. When the first ontology is loaded, all current work and profiles are lost.
 2. When a new annotation profile is added, it is not displayed until view panes are resized.
 3. Can only add annotations to one document at a time since the annotations do not yet know for which file they apply to.
