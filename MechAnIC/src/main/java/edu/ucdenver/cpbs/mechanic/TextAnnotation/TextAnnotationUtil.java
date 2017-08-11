@@ -147,16 +147,28 @@ public final class TextAnnotationUtil {
         textAnnotations.get(mentionSource).put(mentionID, newTextAnnotation);
     }
 
-    public void highlightAllAnnotations(TextViewer textViewer) {
+    public void removeTextAnnotation(Integer spanStart, Integer spanEnd, TextViewer textViewer) {
+        String mentionSource = profileManager.getCurrentHighlighterName();
+        if (textAnnotations.containsKey(mentionSource)) {
+            for (Map.Entry<Integer, TextAnnotation> instance : textAnnotations.get(mentionSource).entrySet()) {
+                int mentionID = instance.getKey();
+                TextAnnotation textAnnotation = instance.getValue();
+                if (Objects.equals(spanStart, textAnnotation.getSpanStart()) && Objects.equals(spanEnd, textAnnotation.getSpanEnd())) {
+                    textAnnotations.get(mentionSource).remove(mentionID);
+                    break;
+                }
+            }
+        }
+        highlightAllAnnotations(textViewer);
+    }
+
+
+    private void highlightAllAnnotations(TextViewer textViewer) {
         textViewer.getHighlighter().removeAllHighlights();
         for (Map.Entry<String, HashMap<Integer, TextAnnotation>> instance1 : textAnnotations.entrySet()) {
             String mentionSource = instance1.getKey();
             for (Map.Entry<Integer, TextAnnotation> instance2 : instance1.getValue().entrySet() ){
-                Integer mentionID = instance2.getKey();
                 TextAnnotation textAnnotation = instance2.getValue();
-
-                String mention = String.format("%s_Instance_%d", mentionSource, mentionID);
-
                 highlightAnnotation(textAnnotation.getSpanStart(), textAnnotation.getSpanEnd(), textViewer, mentionSource);
             }
         }

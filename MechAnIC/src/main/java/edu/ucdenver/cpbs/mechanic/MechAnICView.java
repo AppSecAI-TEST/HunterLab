@@ -101,16 +101,16 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         }
     }
 
-    //TODO make toolbar look better
-    //TODO separate toolbars for textviewer and profile viewer
     private void createToolBar() {
         addAction(new OpenDocumentCommand(tabbedPane), "A", "A");
         addAction(new CloseDocumentCommand(tabbedPane), "A", "B");
+        addAction(new IncreaseTextSizeCommand(tabbedPane), "A", "C");
+        addAction(new DecreaseTextSizeCommand(tabbedPane), "A", "D");
 
         addAction(new LoadAnnotationsCommand(textAnnotationUtil, tabbedPane), "B", "A");
         addAction(new SaveAnnotationsCommand(textAnnotationUtil, tabbedPane), "B", "B");
         addAction(new AddTextAnnotationCommand(textAnnotationUtil, tabbedPane, selectionModel), "B", "C");
-
+        addAction(new RemoveTextAnnotationCommand(textAnnotationUtil, tabbedPane, selectionModel), "B", "D");
 
         addAction(new NewProfileCommand(profileManager), "C", "A");
         addAction(new SwitchProfileCommand(profileManager), "C", "B");

@@ -41,7 +41,6 @@ public class TextViewer extends JTextPane {
 		doc.setCharacterAttributes(0, doc.getLength() + 1, attrs, false);
 	}
 
-	//TODO caretListener that selects only full words
 	//TODO resize text buttons
 
 }

@@ -10,11 +10,13 @@ public class MechAnICIcons {
     public static final String CLOSE_DOCUMENT_ICON = "icons8-Close Window-48.png";
     public static final String LOAD_ANNOTATIONS_ICON = "icons8-XML-48.png";
     public static final String ADD_TEXT_ANNOTATION_ICON = "icons8-Create.png";
+    public static final String REMOVE_TEXT_ANNOTATION_ICON = "icons8-Trash Can.png";
     public static final String SAVE_ANNOTATIONS_ICON = "icons8-Save.png";
-    public static final String NEW_PROFILE_ICON = "icons8-User-48.png";
+    public static final String NEW_PROFILE_ICON = "icons8-Edit Profile.png";
     public static final String NEW_HIGHLIGHTER_ICON = "icons8-Paint Palette-48.png";
-    public static final String SWITCH_PROFILE_ICON = "icons8-Edit Profile.png";
-
+    public static final String SWITCH_PROFILE_ICON = "icons8-User-48.png";
+    public static final String INCREASE_TEXT_SIZE_ICON = "icons8-Increase Font.png";
+    public static final String DECREASE_TEXT_SIZE_ICON = "icons8-Decrease Font.png";
 
     private static final String UGLY_ICON = "";
 
@@ -22,6 +24,8 @@ public class MechAnICIcons {
 
     private static final Integer MENU_ITEM_WIDTH = 20;
     private static final Integer MENU_ITEM_HEIGHT = 20;
+
+
 
     private static HashMap<String, ImageIcon> iconMap = new HashMap<>();
 
