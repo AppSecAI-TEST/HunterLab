@@ -1,5 +1,6 @@
 package edu.ucdenver.cpbs.mechanic.Commands;
 
+import edu.ucdenver.cpbs.mechanic.ui.MechAnICIcons;
 import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
 import org.protege.editor.core.ui.util.Icons;
 import org.protege.editor.core.ui.view.DisposableAction;
@@ -18,7 +19,7 @@ public class OpenDocumentCommand extends DisposableAction {
     private JTabbedPane tabbedPane;
 
     public OpenDocumentCommand(JTabbedPane tabbedPane) {
-        super("Open Document", Icons.getIcon("open.png"));
+        super("Open Document", MechAnICIcons.getIcon(MechAnICIcons.OPEN_DOCUMENT_ICON));
         this.putValue(AbstractAction.SHORT_DESCRIPTION, "Open a text document");
         this.tabbedPane = tabbedPane;
     }

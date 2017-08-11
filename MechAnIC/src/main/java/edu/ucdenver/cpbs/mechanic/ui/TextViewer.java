@@ -12,6 +12,7 @@ public class TextViewer extends JTextPane {
 	public TextViewer() {
 		super();
 		this.setName("Untitled");
+		this.setEditable(false);
 	}
 
 	public void setJTextPaneFont(Font font) {
@@ -39,5 +40,8 @@ public class TextViewer extends JTextPane {
 		// document uses the attributes.
 		doc.setCharacterAttributes(0, doc.getLength() + 1, attrs, false);
 	}
+
+	//TODO caretListener that selects only full words
+	//TODO resize text buttons
 
 }

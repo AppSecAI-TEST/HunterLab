@@ -2,7 +2,7 @@ package edu.ucdenver.cpbs.mechanic;
 
 import edu.ucdenver.cpbs.mechanic.TextAnnotation.TextAnnotationUtil;
 import edu.ucdenver.cpbs.mechanic.Commands.*;
-import edu.ucdenver.cpbs.mechanic.ui.TextAnnotationProfileViewer;
+import edu.ucdenver.cpbs.mechanic.ui.ProfileViewer;
 import edu.ucdenver.cpbs.mechanic.ui.TextViewer;
 import org.apache.log4j.Logger;
 import org.protege.editor.owl.ui.view.cls.AbstractOWLClassViewComponent;
@@ -22,7 +22,7 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
 
     private JSplitPane splitPane;
     private JTabbedPane tabbedPane;
-    private TextAnnotationProfileViewer profileViewer;
+    private ProfileManager profileManager;
 
     private TextAnnotationUtil textAnnotationUtil;
     private MechAnICSelectionModel selectionModel;
@@ -32,7 +32,9 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
 
         selectionModel = new MechAnICSelectionModel();
         textAnnotationUtil = new TextAnnotationUtil(this);
-        textAnnotationUtil.setCurrentAnnotator("none", "none");
+        profileManager = new ProfileManager();
+
+        textAnnotationUtil.setProfileManager(profileManager);
 
         createUI();
         DropTarget dt = new DropTarget(this, this);
@@ -48,22 +50,24 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         return selectedClass;
     }
 
+    //TODO add view to see and manage the mechanism Graphs
     private void createUI() {
         setLayout(new BorderLayout());
 
         tabbedPane = new JTabbedPane();
         tabbedPane.setMinimumSize(new Dimension(100, 50));
 
-        profileViewer = new TextAnnotationProfileViewer();
+        ProfileViewer profileViewer = new ProfileViewer(profileManager);
         profileViewer.setMinimumSize(new Dimension(100, 50));
-        textAnnotationUtil.setProfileViewer(profileViewer);
+        profileManager.setProfileViewer(profileViewer);
+        profileManager.setupDefault();
 
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         splitPane.setOneTouchExpandable(true);
-        splitPane.setDividerLocation(250);
         add(splitPane);
         splitPane.add(tabbedPane);
         splitPane.add(profileViewer);
+        splitPane.setDividerLocation(1200);
 
         setupListeners();
 
@@ -90,24 +94,27 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         try {
             String fileName = "/file/test_annotations.xml";
             InputStream is = getClass().getResourceAsStream(fileName);
-            textAnnotationUtil.loadTextAnnotationsFromXML(is, tabbedPane);
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
+            TextViewer textViewer = (TextViewer)((JScrollPane)tabbedPane.getSelectedComponent()).getViewport().getView();
+            textAnnotationUtil.loadTextAnnotationsFromXML(is, textViewer);
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
     }
 
+    //TODO make toolbar look better
+    //TODO separate toolbars for textviewer and profile viewer
     private void createToolBar() {
         addAction(new OpenDocumentCommand(tabbedPane), "A", "A");
-        addAction(new SaveCommand(textAnnotationUtil, tabbedPane), "A", "B");
-        addAction(new CloseCommand(tabbedPane), "A", "C");
-        addAction(new SetAnnotator(textAnnotationUtil), "B", "A");
-        addAction(new AddTextAnnotation(textAnnotationUtil, tabbedPane, selectionModel), "B", "B");
-        addAction(new LoadAnnotations(textAnnotationUtil, tabbedPane), "B", "C");
-        addAction(new AddNewHighlighterProfile(profileViewer), "C", "A");
+        addAction(new CloseDocumentCommand(tabbedPane), "A", "B");
+
+        addAction(new LoadAnnotationsCommand(textAnnotationUtil, tabbedPane), "B", "A");
+        addAction(new SaveAnnotationsCommand(textAnnotationUtil, tabbedPane), "B", "B");
+        addAction(new AddTextAnnotationCommand(textAnnotationUtil, tabbedPane, selectionModel), "B", "C");
+
+
+        addAction(new NewProfileCommand(profileManager), "C", "A");
+        addAction(new SwitchProfileCommand(profileManager), "C", "B");
+        addAction(new NewHighlighterCommand(profileManager), "C", "C");
     }
 
     private void setupListeners() {
@@ -156,5 +163,4 @@ public class MechAnICView extends AbstractOWLClassViewComponent implements DropT
         frame.pack();
         frame.setVisible(true);
     }
-
 }
